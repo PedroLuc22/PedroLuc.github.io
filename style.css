@@ -6,6 +6,10 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     color: #333;
     line-height: 1.6;
@@ -49,7 +53,7 @@ header .container {
 .logo {
     font-size: 1.5rem;
     font-weight: bold;
-    color: #2e7d32; /* Verde Agro */
+    color: #2e7d32;
 }
 
 nav ul {
@@ -111,7 +115,7 @@ nav ul li a:hover {
     background: #1b5e20;
 }
 
-/* Títulos das Seções */
+/* Títulos */
 h2 {
     font-size: 2.2rem;
     text-align: center;
@@ -125,11 +129,15 @@ h2 {
     margin-bottom: 40px;
 }
 
-/* Sistema de Grid/Cards */
+/* Grids e Cards */
 .grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 30px;
+}
+
+.grid-4 {
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
 }
 
 .card {
@@ -146,15 +154,9 @@ h2 {
     color: #1b5e20;
     margin-bottom: 15px;
     font-size: 1.4rem;
-    line-height: 1.3;
 }
 
-.card p {
-    color: #555;
-    font-size: 1rem;
-}
-
-/* Etiquetas dos Artigos (Tags) */
+/* Modificadores de Cards */
 .card-tag {
     background-color: #eef7f2;
     color: #2e7d32;
@@ -167,14 +169,10 @@ h2 {
     margin-bottom: 15px;
 }
 
-/* Estilo Específico de Receitas */
 .card-receita {
-    border-top: 5px solid #ef6c00; /* Laranja para diferenciar receitas */
+    border-top: 5px solid #ef6c00;
 }
-
-.card-receita h3 {
-    color: #ef6c00;
-}
+.card-receita h3 { color: #ef6c00; }
 
 .passo-a-passo {
     margin-top: 15px;
@@ -183,15 +181,82 @@ h2 {
     color: #666 !important;
 }
 
-/* Seção Sobre */
+.card-dict {
+    border-top: 5px solid #00796b;
+    padding: 25px;
+}
+.card-dict h4 {
+    font-size: 1.2rem;
+    color: #00796b;
+    margin-bottom: 10px;
+}
+
+/* Estilos da Área Onde Encontrar */
+.filter-buttons {
+    margin-bottom: 30px;
+}
+
+.btn-filter {
+    background: white;
+    border: 2px solid #2e7d32;
+    color: #2e7d32;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+.btn-filter:hover, .btn-filter.active {
+    background: #2e7d32;
+    color: white;
+}
+
+.locais-container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.local-item {
+    background: white;
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 6px;
+    border-left: 5px solid #2e7d32;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+    transition: transform 0.2s;
+}
+
+.local-item:hover {
+    transform: translateX(5px);
+}
+
+.local-item h5 {
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.local-item p {
+    font-size: 0.95rem;
+    color: #666;
+}
+
+.local-item span {
+    font-size: 0.85rem;
+    color: #2e7d32;
+    font-style: italic;
+}
+
+/* Sobre e Rodapé */
 .max-width-text {
     max-width: 800px;
     margin: 20px auto 0 auto;
     font-size: 1.15rem;
-    color: #444;
 }
 
-/* Rodapé */
 footer {
     background: #1b5e20;
     color: white;
@@ -201,22 +266,11 @@ footer {
     margin-top: 40px;
 }
 
-/* Responsividade para Celular */
+/* Responsividade */
 @media (max-width: 768px) {
-    header .container {
-        flex-direction: column;
-    }
-    nav ul {
-        margin-top: 15px;
-    }
-    nav ul li {
-        margin: 0 10px;
-    }
-    .hero-content h1 {
-        font-size: 2rem;
-    }
-    .hero {
-        height: auto;
-        padding: 80px 0;
-    }
+    header .container { flex-direction: column; }
+    nav ul { margin-top: 15px; }
+    nav ul li { margin: 0 10px; }
+    .hero-content h1 { font-size: 2rem; }
+    .hero { height: auto; padding: 60px 0; }
 }

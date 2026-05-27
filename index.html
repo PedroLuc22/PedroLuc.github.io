@@ -16,6 +16,8 @@
                     <li><a href="#inicio">Início</a></li>
                     <li><a href="#artigos">Artigos</a></li>
                     <li><a href="#receitas">Receitas</a></li>
+                    <li><a href="#dicionario">Dicionário</a></li>
+                    <li><a href="#onde-encontrar">Onde Encontrar</a></li>
                     <li><a href="#sobre">Sobre</a></li>
                 </ul>
             </nav>
@@ -44,7 +46,7 @@
             <div class="card">
                 <div class="card-tag">Consumo Local</div>
                 <h3>Pegada de Carbono no Prato: O impacto de comprar do vizinho vs. importar</h3>
-                <p>Você já parou para pensar em quantos quilômetros sua comida viaja? Alimentos trazidos de outros países ou estados cruzam oceanos e rodovias, gerando toneladas de poluentes. Descubra como priorizar o produtor da sua região reduz drasticamente as emissões e fortalece a economia local.</p>
+                <p>Você já parou para pensar em quantos quilômetros sua comida viaja? Alimentos trazidos de outros países ou estados cruzam oceanos e rodovias, gerando toneladas de poluentes. Descubra como priorizar o produtor da sua região reduz drasticamente as emissões e fornece sustentabilidade à economia local.</p>
             </div>
         </div>
     </section>
@@ -58,13 +60,74 @@
                 <div class="card card-receita">
                     <h3>Geleia de Casca de Mexerica ou Laranja</h3>
                     <p><strong>Por que fazer?</strong> As cascas de cítricos são ricas em vitaminas e fibras, mas quase sempre vão para o lixo.</p>
-                    <p class="passo-a-passo"><em>Como preparar:</em> Ferva as cascas picadas três vezes trocando a água para tirar o amargor. Depois, bata no liquidificador com um pouco de água, misture com açúcar e leve ao fogo baixo até atingir o ponto de geleia. Perfeito para torreadas!</p>
+                    <p class="passo-a-passo"><em>Como preparar:</em> Ferva as cascas picadas três vezes trocando a água para tirar o amargor. Depois, bata no liquidificador com um pouco de água, misture com açúcar e leve ao fogo baixo até atingir o ponto de geleia. Perfeito para torradas!</p>
                 </div>
 
                 <div class="card card-receita">
                     <h3>Caldo Caseiro de Talos e Aparas</h3>
                     <p><strong>Por que fazer?</strong> Economize no supermercado e evite os caldos industrializados cheios de sódio.</p>
                     <p class="passo-a-passo"><em>Como preparar:</em> Junte talos de couve, brócolis, pontas de cenoura e cascas de cebola em um pote no congelador. Quando tiver uma boa quantidade, ferva tudo em uma panela com água e temperos por 40 minutos. Coe e use como base para sopas e arroz.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="dicionario" class="container section">
+        <h2>Dicionário do Consumidor Consciente</h2>
+        <p class="section-subtitle">Desvende os termos e selos que você encontra nas embalagens do supermercado.</p>
+        
+        <div class="grid grid-4">
+            <div class="card card-dict">
+                <h4>Orgânico</h4>
+                <p>Alimentos cultivados sem o uso de fertilizantes sintéticos, agrotóxicos ou sementes modificadas (transgênicos), respeitando ciclos naturais.</p>
+            </div>
+            <div class="card card-dict">
+                <h4>Hidropônico</h4>
+                <p>Vegetais cultivados na água, sem uso de solo. Os nutrientes são dissolvidos na água, gerando economia de espaço e controle de pragas.</p>
+            </div>
+            <div class="card card-dict">
+                <h4>Carbono Neutro</h4>
+                <p>Selo que garante que a quantidade de gases poluentes emitidos na produção do alimento foi totalmente compensada com o plantio de árvores.</p>
+            </div>
+            <div class="card card-dict">
+                <h4>Agro Regenerativo</h4>
+                <p>Práticas de plantio que vão além de proteger: elas recuperam o solo esgotado, melhoram a biodiversidade e restauram os ciclos da água.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="onde-encontrar" class="bg-light">
+        <div class="container section text-center">
+            <h2>Onde Encontrar</h2>
+            <p class="section-subtitle">Descubra iniciativas sustentáveis perto de você. Selecione uma categoria:</p>
+            
+            <div class="filter-buttons">
+                <button class="btn-filter active" onclick="filtrarLocais('todos')">Ver Todos</button>
+                <button class="btn-filter" onclick="filtrarLocais('feira')">Feiras Livres</button>
+                <button class="btn-filter" onclick="filtrarLocais('coop')">Cooperativas</button>
+                <button class="btn-filter" onclick="filtrarLocais('mercado')">Mercados Orgânicos</button>
+            </div>
+
+            <div class="locais-container" id="lista-locais">
+                <div class="local-item feira">
+                    <h5>Feira Ecológica Central</h5>
+                    <p>📍 Praça Principal, Centro — Sábados, das 7h às 12h.</p>
+                    <span>Direto do pequeno produtor familiar.</span>
+                </div>
+                <div class="local-item coop">
+                    <h5>Cooperativa AgroVerde</h5>
+                    <p>📍 Av. das Nações, 450 — Segunda a Sexta, das 8h às 18h.</p>
+                    <span>União de produtores locais focados em manejo integrado.</span>
+                </div>
+                <div class="local-item mercado">
+                    <h5>Mercado Grão da Terra</h5>
+                    <p>📍 Rua das Flores, 1020 — Diariamente, das 9h às 20h.</p>
+                    <span>Produtos com certificação de origem e rastreabilidade por QR Code.</span>
+                </div>
+                <div class="local-item feira">
+                    <h5>Circuito de Feiras Verdes</h5>
+                    <p>📍 Bairro Jardim das Américas — Quartas-feiras, das 16h às 20h.</p>
+                    <span>Frutas e verduras frescas colhidas no mesmo dia.</span>
                 </div>
             </div>
         </div>
@@ -80,6 +143,29 @@
     <footer>
         <p>&copy; 2026 Da Semente ao Prato. Todos os direitos reservados.</p>
     </footer>
+
+    <script>
+        function filtrarLocais(categoria) {
+            // Atualizar cor do botão ativo
+            const botoes = document.querySelectorAll('.btn-filter');
+            botoes.forEach(botao => botao.classList.remove('active'));
+            event.target.classList.add('active');
+
+            // Filtrar os itens da lista
+            const itens = document.querySelectorAll('.local-item');
+            itens.forEach(item => {
+                if (categoria === 'todos') {
+                    item.style.display = 'block';
+                } else {
+                    if (item.classList.contains(categoria)) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                }
+            });
+        }
+    </script>
 
 </body>
 </html>
