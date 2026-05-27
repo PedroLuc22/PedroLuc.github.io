@@ -75,7 +75,7 @@ nav ul li a:hover {
 /* Banner Principal (Hero) */
 .hero {
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1592417817098-8f3d6eb19675?auto=format&fit=crop&w=1200&q=80') no-repeat center center/cover;
-    height: 70vh;
+    height: 65vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -111,7 +111,7 @@ nav ul li a:hover {
     background: #1b5e20;
 }
 
-/* Seção de Pilares (Cards) */
+/* Títulos das Seções */
 h2 {
     font-size: 2.2rem;
     text-align: center;
@@ -125,29 +125,70 @@ h2 {
     margin-bottom: 40px;
 }
 
+/* Sistema de Grid/Cards */
 .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 30px;
 }
 
 .card {
     background: white;
-    padding: 30px;
+    padding: 35px;
     border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.04);
     border-top: 5px solid #2e7d32;
+    display: flex;
+    flex-direction: column;
 }
 
 .card h3 {
+    color: #1b5e20;
+    margin-bottom: 15px;
+    font-size: 1.4rem;
+    line-height: 1.3;
+}
+
+.card p {
+    color: #555;
+    font-size: 1rem;
+}
+
+/* Etiquetas dos Artigos (Tags) */
+.card-tag {
+    background-color: #eef7f2;
     color: #2e7d32;
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 4px 12px;
+    border-radius: 15px;
+    align-self: flex-start;
     margin-bottom: 15px;
 }
 
+/* Estilo Específico de Receitas */
+.card-receita {
+    border-top: 5px solid #ef6c00; /* Laranja para diferenciar receitas */
+}
+
+.card-receita h3 {
+    color: #ef6c00;
+}
+
+.passo-a-passo {
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px dashed #ddd;
+    color: #666 !important;
+}
+
+/* Seção Sobre */
 .max-width-text {
     max-width: 800px;
     margin: 20px auto 0 auto;
-    font-size: 1.1rem;
+    font-size: 1.15rem;
+    color: #444;
 }
 
 /* Rodapé */
@@ -155,8 +196,9 @@ footer {
     background: #1b5e20;
     color: white;
     text-align: center;
-    padding: 20px 0;
+    padding: 25px 0;
     font-size: 0.9rem;
+    margin-top: 40px;
 }
 
 /* Responsividade para Celular */
@@ -167,7 +209,14 @@ footer {
     nav ul {
         margin-top: 15px;
     }
+    nav ul li {
+        margin: 0 10px;
+    }
     .hero-content h1 {
         font-size: 2rem;
+    }
+    .hero {
+        height: auto;
+        padding: 80px 0;
     }
 }
